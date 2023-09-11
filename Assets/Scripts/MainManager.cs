@@ -73,4 +73,10 @@ public class MainManager : MonoBehaviour
         m_GameOver = true;
         GameOverText.SetActive(true);
     }
+
+    [SerializeField]
+    public class PlayerData
+    {
+
+    }
 }
