@@ -410,7 +410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 150, y: -60}
+  m_AnchoredPosition: {x: 100, y: -64}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &188020406
@@ -503,7 +503,7 @@ MonoBehaviour:
   Ball: {fileID: 177912862}
   ScoreText: {fileID: 188020406}
   CurrentPlayerName: {fileID: 536800207}
-  BestPlayerStats: {fileID: 2078529056}
+  BestPlayerNameAndScore: {fileID: 2078529056}
   GameOverText: {fileID: 474497238}
 --- !u!1 &455529321
 GameObject:
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 536800208}
   - component: {fileID: 536800207}
   m_Layer: 5
-  m_Name: CurrentName
+  m_Name: CurrentPlayerName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,7 +686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149.09, y: 223}
+  m_AnchoredPosition: {x: -100, y: 163}
   m_SizeDelta: {x: 298.18, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536800207

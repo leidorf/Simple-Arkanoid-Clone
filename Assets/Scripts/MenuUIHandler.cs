@@ -9,23 +9,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-using System.IO;
-using System.Runtime.CompilerServices;
 
 [DefaultExecutionOrder(1000)]
 public class MenuUIHandler : MonoBehaviour
 {
-    public Text bestPlayerStats;
-    private string bestPlayerName;
-    private int highestScore;
 
     public Button startButton;
     public InputField playerNameInput;
-
-    private void Awake()
-    {
-        WriteBestStats();    
-    }
 
     void Start()
     {
@@ -61,30 +51,6 @@ public class MenuUIHandler : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    private void LoadBestStats()
-    {
-       
-        string path = Application.persistentDataPath + "/savefile.json";
-        if(File.Exists(path))
-        {
-            string json = File.ReadAllText(path);
-            SaveData data = JsonUtility.FromJson<SaveData>(json);
-
-            bestPlayerName = data.theBestPlayer;
-            highestScore = data.highestScore;
-        }
-        else
-        {
-
-        }
-    }
-
-    private void WriteBestStats()
-    {
-        LoadBestStats();
-        bestPlayerStats.text = $"Best Score  - {bestPlayerName}:{highestScore}";
-    }
-
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -94,9 +60,4 @@ public class MenuUIHandler : MonoBehaviour
 #endif
     }
 }
-    [SerializeField]
-    public class SaveData
-    {
-        public int highestScore;
-        public string theBestPlayer;
-    }
+
